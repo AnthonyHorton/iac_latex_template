@@ -1,5 +1,12 @@
 \documentclass[]{iac}
 
+% Workaround for bugged version of titlesec still shipping in Ubuntu 16.04 LTS >:-(
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
+
 \DeclareMathOperator{\E}{E}
 \DeclareMathOperator{\prob}{p}
 \DeclareMathOperator{\tr}{tr}
@@ -11,24 +18,41 @@
 
 \begin{document}
 
-\IACpaperyear{14}
-\IACpapernumber{D9.2.8}
-\IACconference{65}
-\IAClocation{Toronto, Canada}
-\IACcopyrightA{2014}{the authors}
+\IACpaperyear{17}
+\IACpapernumber{A7.2.2}
+\IACconference{68}
+\IAClocation{Adelaide, Australia}
+\IACdates{25--29 September 2017}
+\IACcopyrightBOne{2017}{Anthony Horton}
 
-\title{Manuscript Template and Style Guide}
+\title{The Australian Space Eye:\\Studying the History of Galaxy Formation with a CubeSat}
 
 %\author{Main~Author\\Affiliation, Country, email address\and
 %		Co-Author\\Affiliation, Country, email address}
-\IACauthor{Main~Author}{Affiliation, Country, email address}
-\IACauthor{Co-Author}{Affiliation, Country, email address}
+\IACauthor{Anthony~Horton}{Australian Astronomical Observatory, Australia, anthony.horton@aao.gov.au}
+\IACauthor{Lee Spitler}{Macquarie University, Australia}
+\IACauthor{Naomi Mathers}{Spacae Industry Association of Australa, Australia}
+\IACauthor{Mike Petkovic}{Advanced Instrumentation and Technology Centre, Australia}
+\IACauthor{Douglas Griffin}{University of New South Wales Canberra, Australia}
+\IACauthor{Simon Barraclough}{University of New South Wales Canberra, Australia}
+\IACauthor{Craig Benson}{University of New South Wales Canberra, Australia}
+\IACauthor{Igor Dmitrijevic}{University of New South Wales Canberra, Australia}
+\IACauthor{Andrew Lambert}{University of New South Wales Canberra, Australia}
+\IACauthor{Anthony Previte}{Tyvak International SRL, United States}
+\IACauthor{John Bowen}{Tyvak International SRL, United States}
+\IACauthor{Solomon Westerman}{Tyvak International SRL, United States}
+\IACauthor{Jordi Puig-Suari}{California Polytechnic State University, United States}
+\IACauthor{Sam Reisenfeld}{Macquarie University, Australia}
+\IACauthor{Jon Lawrence}{Australian Astronomical Observatory, Australia}
+\IACauthor{Ross Zhelem}{Australian Astronomical Observatory, Australia}
+\IACauthor{Matthew Colless}{Australian National University, Australia}
+\IACauthor{Russell Boyce}{University of New South Wales Canberra, Australia}
 
 \abstract{A one paragraph abstract of no more than 400 words must be included at the beginning of the manuscript. It should be a summary and complete in itself (no references to the main body of the manuscript). The abstract should indicate the subjects dealt with within the full text and should state the objectives of the investigation. Newly-observed facts and conclusions of the experiment or argument discussed in the full text must be stated in this summary. Readers should not have to read the full text to understand the abstract. The abstract can be an updated version of the one submitted at the call-for-abstracts but its contents must not differ substantially.}
 
 \maketitle
 
-\section{Major Headings}
+\section{Major headings}
 Major headings are capitalized, underlined, and centered in the column.
 
 \subsection{Subheadings}
@@ -37,13 +61,13 @@ Subheadings are underlined and placed flush on the left-hand margin of the colum
 \subsubsection{Sub-subheadings}
 Sub-subheadings are underlined and indented.
 
-\section{Style Guide}
+\section{Style guide}
 
 \subsection{Acronyms}
 Always use the full title followed by the acronym to be used.
 
 \subsection{References}
-List and number all the bibliographical references at the end of the full text, in the order of appearance.\cite{IAFSecretariat2014}
+List and number all the bibliographical references at the end of the full text, in the order of appearance.
 
 \subsection{Equation Numbers}
 When numbering equations, enclose numbers in brackets and place flush right with the right-hand margin of the column.
@@ -57,7 +81,7 @@ It is important to remember that all artwork, captions, figures (\textit{e.g.}, 
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{examplefigure.png}
-\caption{\label{fig:X}Title of the figure, left-justified, subsequent text indented. Place figures at the top or bottom of a column wherever possible, as close as possible to the first references to them in the manuscript. Restrict them to single-column width unless this would make them illegible.} 
+\caption{\label{fig:X}Title of the figure, left-justified, subsequent text indented. Place figures at the top or bottom of a column wherever possible, as close as possible to the first references to them in the manuscript. Restrict them to single-column width unless this would make them illegible.}
 \end{figure}
 
 \subsection{Graph Lines, Drawings, and Tables}
