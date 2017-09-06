@@ -70,19 +70,19 @@
 
 \abstract{The Australian Space Eye is a proposed astronomical telescope based on a \SI{6}{U} CubeSat platform. The Space
 Eye will exploit the low level of systematic errors achievable with a small space based telescope to enable high
-accuracy measurements of the optical extragalactic background light (EBL) and low surface brightness emission around
-nearby galaxies. To date absolute measurements of the EBL have proven elusive at these wavelengths; the variability of
-atmospheric emission and scattering make ground based measurements difficult while attempts to use sounding rockets have
+accuracy measurements of the Cosmic Infrafred Background (CIB) and low surface brightness emission around
+nearby galaxies. To date absolute measurements of the CIB have proven elusive; the variability of atmospheric emission
+and scattering at these wavelengths make ground based measurements difficult while attempts to use sounding rockets have
 struggled to accumulate sufficient exposure time. An dedicated orbital telescope is required for a robust measurement,
 and Space Eye has been designed to fill this role. The scientific payload of Space Eye is a \SI{90}{\milli\metre}
 diameter, clear aperture, all refractive telescope for wide field imaging using a set of 6 broadband filters in the $i'$
 (700--\SI{850}{\nano\metre}) and $z'$ (850--\SI{1000}{\nano\metre}) bands. The telescope design is optimised to minimise
 all sources of stray light which, when combined with the advantages of the space environment, will enable the most
-accurate measurements of the EBL so far. This project is also a demonstrator for several technologies with general
+accurate measurements of the CIB so far. This project is also a demonstrator for several technologies with general
 applicability to astronomical observations from nanosatellites, in particular arcsecond level instrument pointing
 stability and efficient image sensor temperature control. These crucial capabilities are commonplace in larger
 scientific satellites but have yet to be flight proven in a CubeSat platform. For the former we have developed a two
-stage ADCS concept combining high precision star trackers, reaction wheels, and sensorshift image stabilisation in the
+stage ADCS concept combining high precision star trackers, reaction wheels, and sensor shift image stabilisation in the
 science instrument focal plane. Detailed system modelling, incorporating in flight performance data for many of the
 components, has verified that the design can achieve sub-arcsecond level pointing stability. We have also designed a
 thermal control system and concept of operations that enables passive cooling of the image sensor to below
@@ -95,13 +95,12 @@ thermal control system and concept of operations that enables passive cooling of
 \section{Introduction}
 \label{sec:intro}
 
-In December 2014 the Advanced Instrumentation Technology Centre at the
-Australian National University hosted the AstroSats 2014 workshop. The workshop was held to explore concepts for
-astronomical nanosatellite missions, with the goal of identifying viable missions that could be funded within existing
-Australian grant schemes. Concepts were required to be justifiable by the expected scientific results alone, i.e.\
-without reference to the development of technology or accumulation of expertise, valuable as those outcomes would be.
-Additionally proposed spacecraft were to be no larger than a \SI{6}{U} CubeSat. The Australian Space Eye was conceived
-in response to this call for proposals.
+In December 2014 the Advanced Instrumentation Technology Centre at the Australian National University hosted the
+AstroSats 2014 workshop. The workshop was held to explore concepts for astronomical nanosatellite missions, with the
+goal of identifying viable missions that could be funded within existing Australian grant schemes. Concepts were
+required to be justifiable by the expected scientific results alone, i.e.\ without reference to the development of
+technology or accumulation of expertise, valuable as those outcomes would be. Additionally proposed spacecraft were to
+be no larger than a \SI{6}{U} CubeSat. The Australian Space Eye was conceived in response to this call for proposals.
 
 Meeting the combination of scientific value, cost and size constraints is very challenging, essentially it means
 identifying a compelling science programme that is within the capabilities of a very small instrument in low earth orbit
@@ -110,7 +109,7 @@ benefits of situating an astronomical telescope above the Earth's atmosphere are
 by the Earth's atmosphere and avoiding the degradation of spatial resolution caused by atmospheric turbulence. Neither
 of these are of great relevance to an astronomical CubeSat however, at least one conceived within the AstroSats
 constraints. The gamma ray, X-ray, far ultraviolet and infrared wavelength regions all require exotic optics and/or
-image sensors which are not compatible with the cost, volume, thermal and power limitations of the platform. For this
+image sensors which are not compatible with the cost, volume, thermal and power limitations imposed on us. For this
 reason we limited our consideration to the near ultravoilet to very near infrared wavelength region
 ($\sim200$--\SI{1000}{\nano\metre}) that is accessible with silicon based image sensors and conventional optics. Within
 this wavelength range there is no spatial resolution advantage to being above the Earth's atmosphere either, the
@@ -120,7 +119,7 @@ greater than atmospheric seeing at the same wavelengths.
 There are however two other effects of the atmosphere which are relevant to a CubeSat based optical telescope:
 atmospheric scattering and emission.  Atmospheric scattering spreads the light from astronomical objects in a similar
 way to scattering from the instrument's optics however the impact is compounded by the fact that the distribution of
-aerosols in the atmosphere is spatially and temporally variable, the amount of scattered light surrounding a given
+aerosols in the atmosphere is spatially and temporally variable. The amount of scattered light surrounding a given
 source can vary by several percent of the source brightness even in good `photometric' conditions, on timescales of
 minutes to months. The variability in the scattering makes it difficult to accurately characterise and subtract
 \cite{McGraw2010}, thereby introducing problematic systematic errors.  Similar issues arise from atmospheric emission,
@@ -131,7 +130,7 @@ consequenty it is also spatially and temporally variable on timescales of minute
 makes accurate subtraction difficult.  As a result of these effects locating a telescope in space not only helpfully
 reduces both scattered light and sky background levels but crucially makes both far more stable.  Above the atmosphere
 the only sources of scattered light are associated with the instrument itself and the dominant source of sky background
-is the zodiacal light \cite{Leinert1998} which, while it does exhibit large scale spatial and seasonal variations, is
+is the Zodiacal Light \cite{Leinert1998} which, while it does exhibit large scale spatial and seasonal variations, is
 much less variable, more uniform and more predictable than atmospheric emission.
 
 The scientific competitiveness of small telescope for certain types of observations is well proven. For example while
@@ -154,39 +153,61 @@ We conclude that a CubeSat based astronomical telescope may be scientifically co
 telescope performing measurements that are typically limited by systematic errors. We identify the
 700--\SI{1000}{\nano\metre} wavelength region as particularly promising as it is accessible to instrumentation
 compatible with the constraints of a CubeSat mission while ground based instruments would be hampered by bright
-atmospheric emission, in terms of both reduced sensitivity and increased systematic errors.  We have based the
-Australian Space Eye proposal on two science goals which would be well served by a telescope operating in this regime,
-the measurement of extragalactic background light and imaging of low surface brightness structures around nearby
-galaxies.  These are discussed in more detail in the next section.
+atmospheric emission, in terms of both reduced sensitivity and increased systematic errors. We have based the
+Australian Space Eye proposal on two primary science goals which would be well served by a telescope operating in this
+regime, the measurement of the Cosmic Infrared Background and mapping of the interplanetary dust cloud. These are
+discussed in more detail in the next section.
 
 \section{Science Case}
 \label{sec:aims}
 
-\subsection{Extragalactic Background Light}
+\subsection{Cosmic Infrared Background}
 
-A fundamental measurement of the universe is its total luminosity, which contains the entire history of all sources of
-light, from signatures of the Big Bang in the cosmic microwave background and, at optical wavelengths, all past
-radiative processes including light from stars and even black hole accretion disks. Although the microwave background
-has been securely measured the cosmic optical background (the total luminosity at optical wavelengths) has not due to
-our non-ideal vantage point - we are embedded in the dust cloud of the solar system. This dust scatters sunlight into
-the observer's telescope and so we must separate the background light we want to measure from the light scattered by
-this foreground dust, the so-called Zodiacal light. This has proved very challenging (see Cooray 2016\cite{Cooray2016}),
-though there have been a few attempts (e.g.\ Bernstein 2007\cite{Bernstein2007}, Aharonian et al.\
-2006\cite{Aharonian2006} and Tsumura et al.\ 2010\cite{Tsumura2010}). What is needed is an instrument that can measure
-and separate the Zodiacal and extragalatic background light.
+Just as observations of the Cosmic Microwave Background all astronomers to directly see and therefore study the
+aftermath of the Big bang, the Cosmic Infrared Background (CIB) contains the entire integrated history of nearly
+everything that has happened since. The CIB directly probes all aspects of galaxy formation and evolution:
+as such it is a fundamental observable that anchors theories of galaxy formation and evolution.
 
-One approach for disentangling the Zodiacal and extragalactic light exploits spectral features of the former. As
-Zodiacal light is scattered sunlight its spectrum is similar to that of the Sun, subject to reddening due to the
-wavelength dependence of the scattering strength\cite{Giavalisco2002,Aldering2001,Leinert1998}. This includes the strong
-Calcium triplet absorption lines near \SI{860}{\nano\metre}, which will be present in the Zodiacal light spectrum with
-the same equivalent width as in the solar spectrum but will be absent from the spectrum of the extragalactic background
-due to the effects of cosmological redshifts. Consequently the observed equivalent width of absorption lines in the
-total background light (Zodiacal plus extragalactic) provided a measure of the relative contributions of the two
-components. This was the goal of one of the instruments of the CIBER sounding rocket experiment\cite{Zemcov2013}, a
-narrowband imaging spectrometer based on a tilted objective filter\cite{Korngut2013}, however the measurement proved
-extremely difficult to make with the limited total exposure time of a sounding rocket campaign. An orbital space
-telescope, able to accumulate a year or more of observing time, promises secure measurements of both the absolute total
-sky brightness and the relative contributions of the Zodiacal light and extragalactic background.
+To measure the CIB one must account for all foreground sources of diffuse light between the
+telescope and the CIB. Avoiding the bright and highly variable infrared flow of our atmosphere necessitates a space
+based telescope, and it must also be designed to minise stray light from the Sun, Earth and Moon.  Modelling and
+subtracting contributions from starlight scattered by interstellar dust within the Milky Way can be done using
+existing high resolution maps (e.g. Schlafly et al., 2017\cite{Schlafly2017}). The main challenge is accounting for
+zodiacal light, which comes from sunlight interacting with dust particles within the Solar System.  This has proved
+very challenging (see Cooray 2016\cite{Cooray2016}), and while there have been several attempts to directly
+measure the CIB (e.g.\ Bernstein 2007, Aharonian et al.\ 2006 and Tsumura et al.\ 2010
+\cite{Bernstein2007,Aharonian2006,Tsumura2010}) no facility has been able to successfully measure and substract the
+zodiacal light simultaneously with observations of the CIB. Space Eye will be the first facility to simultaneously
+monitor the zodiacal light and isolate the underlying CIB signal.
+In this way Space Eye will pin down models of galaxy evolution and reveal the role of extremely faint, but potentially
+very numerous, rest frame ultraviolet source in (re-)ionising hydrogen gas throughout the Universe\cite{Lanz2014}.
+
+The approach that Space Eye will use for disentangling the Zodiacal and cosmic light exploits spectral features of the
+former. As zodiacal light is scattered sunlight its spectrum is similar to that of the Sun, subject to reddening due to
+the wavelength dependence of the scattering strength\cite{Giavalisco2002,Aldering2001,Leinert1998}. This includes the
+strong Calcium triplet absorption lines near \SI{860}{\nano\metre}, which will be present in the Zodiacal light
+spectrum with the same equivalent width as in the solar spectrum but will be absent from the spectrum of the
+CIB due to the effects of cosmological redshifts. Consequently the observed equivalent width of
+absorption lines in the total background light (Zodiacal plus cosmic) provided a measure of the relative contributions
+of the two components. This was the goal of one of the instruments of the CIBER sounding rocket
+experiment\cite{Zemcov2013}, a narrowband imaging spectrometer based on a tilted objective filter\cite{Korngut2013},
+however the measurement proved extremely difficult to make with the limited total exposure time of a sounding rocket
+campaign. An orbital space telescope, able to accumulate a year or more of observing time, promises secure measurements
+of both the absolute total sky brightness and the relative contributions of the Zodiacal light and extragalactic
+background.
+
+\subsection{Interplanetary dust}
+
+My measuring the zodiacal light for the CIB science goal we will also map the dust cloud that exists within the plane
+of the Solar System. The origin of this dust remains highly uncertain, with contradictory studies finding the dust
+originating from either asteroids or comets (e.g. Liou et al. 1995\cite{Liou1995}, Nesvorn\'y et al.\ 2010
+\cite{Nesvorny2010}, Kawara et al. 2017\cite{Kawara2017}). The origin of the dust causing the zodiacal light provides
+constraints about important past events (e.g.\ the late heavy bombardment) and gives context to new observations of
+exoplanet systems with younger, hot dust disks (e.g. Nesvorn\'y et al.\ 2010\cite{Nesvorny2010}). Zodiacal light
+measurements have the potential to resolve this mystery (Yang \&\ Ishiguro 2015\cite{Yang2015}), however previous
+observations were limited in their wavelength, temporal and/or spatial coverage. Space Eye will overcome these
+limitations to produce the most detailed map of the Solar System's dust cloud, and therby make a major contribution to
+our understanding of the past history of the Solar System.
 
 \subsection{Low Surface Brightness Galaxies}
 
@@ -213,8 +234,10 @@ housing an optical imaging telescope. The specifications of the system are drive
 Sec.~\ref{sec:aims}, subject to the constraints discussed in Sec.~\ref{sec:intro}. An artist's impression of Space Eye
 is shown in Fig.~\ref{fig:render}.
 
-\begin{figure}[tp] \includegraphics[width=\columnwidth]{figures/ASE-2016-a.png} \caption{\label{fig:render}Artist's
-impression of the Australian Space Eye in orbit over the Tasman Sea.} \end{figure}
+\begin{figure}[htp]
+  \includegraphics[width=\columnwidth]{figures/ASE-2016-a.png}
+  \caption{\label{fig:render}Artist's impression of the Australian Space Eye in orbit over the Tasman Sea.}
+\end{figure}
 
 \subsection{Optical Payload}
 
@@ -246,7 +269,7 @@ limited at this pixel scale. \SI{3}{\arcsecond\per\pix} is also a good match to 
 surface brightness imaging facilities such as the Dragonfly Telephoto Array\cite{Abraham2014} and Huntsman Telephoto
 Array\cite{Horton2016}.
 
-\begin{table*}[bp]
+\begin{table*}[hbp]
   \caption{Summary of main optical payload requirements}
   \label{tab:payload}
   \begin{center}
@@ -269,13 +292,20 @@ absoprtion line at \SI{854.2}{\nano\metre}. More details are discussed in Sec.~\
 For Space Eye the requirement for a clean and stable PSF translates to minimising all sources of stray light, including
 surface and bulk scattering, internal reflections, stray sunlight/Earthshine/moonlight and diffraction.
 
+\begin{figure}[htp]
+  \includegraphics[width=\columnwidth]{figures/wings.png}
+  \caption{\label{fig:wings}Surface plots of simulated images showing how stray (scattered) light from each star is
+    higher in conventional telescopes than in Space Eye. The accumulation of stray light from all the stars in a field
+    limits access to the underlying Cosmic Infrared Background.}
+\end{figure}
+
 The highest possible sensitivity will be achieved when the optical aperture is as large as it can be within the space
 constraints of the CubeSat, the optical throughput and quantum efficiency (QE) of the image sensor are close to 100\%,
 and the total instrumental noise is below the Poisson noise from the sky background light.
 
 \subsubsection{Image sensor}
 
-\begin{figure}[tp]
+\begin{figure}[htp]
   \center \includegraphics[width=0.7\columnwidth]{figures/cis115.png}
   \caption{\label{fig:cis115}CIS-115 CMOS image sensor, photo credit e2v.}
 \end{figure}
@@ -321,7 +351,7 @@ ability to operate regions of the sensor independently of others, opening up the
 high frame rate autoguiding/star tracking while simultaneously taking a long exposure with the rest of the sensor
 (`on-chip guiding').
 
-\begin{figure}[tp]
+\begin{figure}[htp]
   \center
   \includegraphics[width=\columnwidth]{figures/CIS115QE.pdf}
   \caption{\label{fig:qe}Predicted CIS115 quantum efficiency as a function of wavelength at both \SI{+20}{\celsius} and
@@ -338,7 +368,7 @@ for Space Eye however as those currently available have large pixels and, more i
 ($<\SI{-100}{\celsius}$) to control dark current due to their non-inverted operation. Deep depletion/high rho CMOS image
 sensors show promise however at the time of writing no devices suitable for Space Eye were known to the authors.
 
-\begin{figure}[tp]
+\begin{figure}[htp]
   \center \includegraphics[width=\columnwidth]{figures/CIS115DC.pdf}
   \caption{\label{fig:dc}CIS115 dark current as a function of temperature, based on the model from Wang et al.
     \cite{Wang2014}}
@@ -355,7 +385,7 @@ noise on cooling, to approximately \SI{4}{\el}.
 
 \subsubsection{Telescope optics}
 
-\begin{table}[p]
+\begin{table}[hbp]
   \caption{Summary of telescope optics specifications}
   \label{tab:optics}
   \begin{center}
@@ -371,12 +401,12 @@ noise on cooling, to approximately \SI{4}{\el}.
   \end{center}
 \end{table}
 
-\begin{figure}[p]
+\begin{figure}[htp]
   \center \includegraphics[width=\columnwidth]{figures/spie-layout.png}
   \caption{\label{fig:optics}Cross section optical layout diagram of the baseline design for the Australian Space Eye.}
 \end{figure}
 
-\begin{figure}[p]
+\begin{figure}[htp]
   \center \includegraphics[width=\columnwidth]{figures/ensquared.png}
   \caption{\label{fig:ensquared}Ensquared energy as a function of half-width for the baseline optical design.}
 \end{figure}
@@ -417,7 +447,8 @@ and stable PSF.
 The telescope will include a bistable optical shutter between the L5 and L6 elements to enable on orbit image sensor
 dark current measurements.
 
-\subsubsection{Mosaic filter} \label{sec:mosaic}
+\subsubsection{Mosaic filter}
+\label{sec:mosaic}
 
 In order to provide the necessary data to allow both broadband $i'$ and $z'$ band imagery and seperate measurements of
 the Zodiacal light and extragalactic components of the sky background we propose the use of 6 broadband filters, 3
@@ -439,13 +470,13 @@ the 6 different filters by a fixed mosaic filter at the focal plane, an example 
 Fig.~\ref{fig:mosaic}. By taking sequences of 6 images with pointing offsets equal to the dimensions of the filter
 regions contiguous images can be built up for each filter.
 
-\begin{figure}[tbp]
+\begin{figure}[htp]
   \center \includegraphics[width=0.7\columnwidth]{figures/mosaic.pdf}
   \caption{\label{fig:mosaic}Example mosaic filter layout. Each filter covers an area of $333 \times \SI{376}{\pix}$,
     $\SI{16.7}{\arcminute} \times \SI{18.8}{\arcminute}$ on sky.}
 \end{figure}
 
-\begin{figure}[pt]
+\begin{figure}[htp]
   \center \includegraphics[width=\columnwidth]{figures/filters.pdf}
   \caption{\label{fig:filters}Nominal filter transmission profiles shown together with a model of the Zodiacal light
     photon spectral flux density.}
@@ -472,7 +503,7 @@ and read noise we can quantify the degree to which instrumental noise is effecti
 summarised in Fig.~\ref{fig:relsnr}, which shows the SNR relative to the SNR without instrumental noise for the $i2$ and
 $z2$ filters for a range of image sensor temperatures and sub-exposure time.
 
-\begin{figure}[tbp]
+\begin{figure}[htp]
   \center \includegraphics[width=\columnwidth]{figures/relsnr.pdf}
   \caption{\label{fig:relsnr}Predicted SNR relative to the SNR without instrumental noise for the $i2$ and $z2$ filters
     as a function sub-exposure time for a range of image sensor temperatures. The calculation uses the ecliptic pole
@@ -496,7 +527,7 @@ $1\sigma$ per pixel sensitivity limits of \SI{1.1e-20}{\watt\per\metre\squared\p
 \SI{1.9e-20}{\watt\per\metre\squared\per\tarcsecond\squared\per\micron} for $i'$ and $z'$ bands respectively, equivalent
 to 30.5 and 29.6 in AB magnitude surface brightness units.
 
-\begin{figure}[tbp]
+\begin{figure}[htp]
   \center \includegraphics[width=\columnwidth]{figures/sens.pdf}
   \caption{\label{fig:sens}Predicted surface brightness spectral flux density corresponding to a signal to noise ratio
     of 1 per pixel as a function of total exposure time per filter. The calculcation is for the ecliptic pole Zodiacal
@@ -515,7 +546,7 @@ to minimise its effects target should be chosen from within regions between 15.5
 and +60 degrees declination in the north, and between 4 and 5 hours Right Ascension and -50 and -60 degrees declination
 in the south.
 
-\begin{figure}[pt]
+\begin{figure}[htp]
   \center \includegraphics[width=\columnwidth]{figures/i_rel_sens.pdf}
   \caption{\label{fig:sensmap}Predicted $i'$ band sensitivity relative to the ecliptic pole, zero extinction case. The
     maps show $\SI{45}{\degree}\times\SI{45}{\degree}$ gnomonic projections centred on the north and south ecliptic
@@ -543,7 +574,7 @@ systems will be sufficient given the expected data rates (see section \ref{sec:c
 \subsubsection{Attitude determination \&\ control}
 \label{sec:adcs}
 
-\begin{figure}[tp]
+\begin{figure}[htp]
   \center \includegraphics[width=\columnwidth]{figures/adcs.png}
   \caption{\label{fig:adcs}Main components of the standard Tyvak Endeavour attitude determination and control system
     (ADCS). Space Eye's ADCS will be based on an updated Endeavour system.}
@@ -595,7 +626,7 @@ algorithms to drive the second stage control system.
 \subsubsection{Thermal control}
 \label{sec:thermal}
 
-\begin{figure*}[tbp]
+\begin{figure*}[htp]
   \begin{center}
     \begin{tabular}{m{0.45\textwidth} m{0.45\textwidth}}
       \includegraphics[width=0.45\textwidth]{figures/radiator.png} & \includegraphics[width=0.45\textwidth]{figures/orbit.png}
@@ -606,7 +637,7 @@ algorithms to drive the second stage control system.
     without Earth IR avoidance manoeuvres outside of the observation windows (right).}
 \end{figure*}
 
-\begin{figure}[tbph]
+\begin{figure}[htp]
   \center \includegraphics[width=\columnwidth]{figures/thermal.pdf}
   \caption{\label{fig:thermalplots} Predicted image sensor and thermal radiator temperature variations during several
     orbits with a thermal IR baffle, both with and without Earth IR avoidance manoeuvres outside of the observation
