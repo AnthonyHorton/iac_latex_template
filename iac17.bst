@@ -4,11 +4,11 @@
 %%
 %% The original source files were:
 %%
-%% merlin.mbs  (with options: `head,seq-no,nm-init,ed-au,nmlm,x3,m1,dt-jnl,yr-par,xmth,yrp-x,jttl-rm,vnum-cm,volp-blk,jdt-p,pp-last,num-xser,jnm-x,btit-rm,bt-rm,pre-edn,edpar,bkedcap,blk-com,in-col,pp,ed,abr,xedn,jabr,xand,em-x,nfss,,{}')
-%% physjour.mbs  (with options: `seq-no,nm-init,ed-au,nmlm,x3,m1,dt-jnl,yr-par,xmth,yrp-x,jttl-rm,vnum-cm,volp-blk,jdt-p,pp-last,num-xser,jnm-x,btit-rm,bt-rm,pre-edn,edpar,bkedcap,blk-com,in-col,pp,ed,abr,xedn,jabr,xand,em-x,nfss,,{}')
-%% geojour.mbs  (with options: `seq-no,nm-init,ed-au,nmlm,x3,m1,dt-jnl,yr-par,xmth,yrp-x,jttl-rm,vnum-cm,volp-blk,jdt-p,pp-last,num-xser,jnm-x,btit-rm,bt-rm,pre-edn,edpar,bkedcap,blk-com,in-col,pp,ed,abr,xedn,jabr,xand,em-x,nfss,,{}')
-%% photjour.mbs  (with options: `seq-no,nm-init,ed-au,nmlm,x3,m1,dt-jnl,yr-par,xmth,yrp-x,jttl-rm,vnum-cm,volp-blk,jdt-p,pp-last,num-xser,jnm-x,btit-rm,bt-rm,pre-edn,edpar,bkedcap,blk-com,in-col,pp,ed,abr,xedn,jabr,xand,em-x,nfss,,{}')
-%% merlin.mbs  (with options: `tail,seq-no,nm-init,ed-au,nmlm,x3,m1,dt-jnl,yr-par,xmth,yrp-x,jttl-rm,vnum-cm,volp-blk,jdt-p,pp-last,num-xser,jnm-x,btit-rm,bt-rm,pre-edn,edpar,bkedcap,blk-com,in-col,pp,ed,abr,xedn,jabr,xand,em-x,nfss,,{}')
+%% merlin.mbs  (with options: `head,seq-no,nm-init,ed-au,nmlm,x3,m1,yr-par,xmth,jttl-rm,vnum-cm,volp-blk,jdt-p,pp-last,num-xser,numser,jnm-x,btit-rm,bt-rm,pre-pub,edpar,bkedcap,blk-com,in-col,pp,ed,abr,xedn,jabr,amper,xand,etal-xc,nfss,,{}')
+%% physjour.mbs  (with options: `seq-no,nm-init,ed-au,nmlm,x3,m1,yr-par,xmth,jttl-rm,vnum-cm,volp-blk,jdt-p,pp-last,num-xser,numser,jnm-x,btit-rm,bt-rm,pre-pub,edpar,bkedcap,blk-com,in-col,pp,ed,abr,xedn,jabr,amper,xand,etal-xc,nfss,,{}')
+%% geojour.mbs  (with options: `seq-no,nm-init,ed-au,nmlm,x3,m1,yr-par,xmth,jttl-rm,vnum-cm,volp-blk,jdt-p,pp-last,num-xser,numser,jnm-x,btit-rm,bt-rm,pre-pub,edpar,bkedcap,blk-com,in-col,pp,ed,abr,xedn,jabr,amper,xand,etal-xc,nfss,,{}')
+%% photjour.mbs  (with options: `seq-no,nm-init,ed-au,nmlm,x3,m1,yr-par,xmth,jttl-rm,vnum-cm,volp-blk,jdt-p,pp-last,num-xser,numser,jnm-x,btit-rm,bt-rm,pre-pub,edpar,bkedcap,blk-com,in-col,pp,ed,abr,xedn,jabr,amper,xand,etal-xc,nfss,,{}')
+%% merlin.mbs  (with options: `tail,seq-no,nm-init,ed-au,nmlm,x3,m1,yr-par,xmth,jttl-rm,vnum-cm,volp-blk,jdt-p,pp-last,num-xser,numser,jnm-x,btit-rm,bt-rm,pre-pub,edpar,bkedcap,blk-com,in-col,pp,ed,abr,xedn,jabr,amper,xand,etal-xc,nfss,,{}')
 %% ----------------------------------------
 %% *** International Astronautical Congress (IAC) 2017 bibliography style ***
 %% 
@@ -136,7 +136,7 @@ FUNCTION {add.blank}
 
 FUNCTION {date.block}
 {
-  add.blank
+  skip$
 }
 
 FUNCTION {not}
@@ -189,7 +189,11 @@ FUNCTION {field.or.null}
   if$
 }
 FUNCTION {emphasize}
-{ skip$ }
+{ duplicate$ empty$
+    { pop$ "" }
+    { "\emph{" swap$ * "}" * }
+  if$
+}
 FUNCTION {tie.or.space.prefix}
 { duplicate$ text.length$ #3 <
     { "~" }
@@ -1025,7 +1029,7 @@ FUNCTION {format.crossref.editor}
               *
             }
             {
-             bbl.and space.word
+              " \& "
               * editor #2 "{vv~}{ll}" format.name$
               "editor" bibinfo.check
               *
@@ -1149,13 +1153,13 @@ FUNCTION {book}
   crossref missing$
     { format.bvolume output
       format.number.series output
-      format.edition output
       format.publisher.address output
     }
     {
       format.book.crossref output.nonnull
     }
   if$
+  format.edition output
   format.date "year" output.check
   format.note output
   fin.entry
@@ -1186,19 +1190,18 @@ FUNCTION {inbook}
   format.btitle "title" output.check
   crossref missing$
     {
+      format.number.series output
+      format.publisher.address output
       format.bvolume output
       format.chapter.pages "chapter and pages" output.check
-      format.number.series output
-      format.edition output
-      format.publisher.address output
     }
     {
       format.chapter.pages "chapter and pages" output.check
       format.book.crossref output.nonnull
     }
   if$
+  format.edition output
   format.date "year" output.check
-  date.block
   format.pages "pages" output.check
   format.note output
   fin.entry
@@ -1210,18 +1213,17 @@ FUNCTION {incollection}
   format.title "title" output.check
   crossref missing$
     { format.in.ed.booktitle "booktitle" output.check
-      format.bvolume output
       format.number.series output
-      format.edition output
-      format.chapter.pages output
       format.publisher.address output
+      format.bvolume output
+      format.chapter.pages output
+      format.edition output
+      format.date "year" output.check
     }
     { format.incoll.inproc.crossref output.nonnull
       format.chapter.pages output
     }
   if$
-  format.date "year" output.check
-  date.block
   format.pages "pages" output.check
   format.note output
   fin.entry
@@ -1232,7 +1234,6 @@ FUNCTION {inproceedings}
   format.title "title" output.check
   crossref missing$
     { format.in.ed.booktitle "booktitle" output.check
-      format.bvolume output
       format.number.series output
       publisher empty$
         { format.organization.address output }
@@ -1240,6 +1241,8 @@ FUNCTION {inproceedings}
           format.publisher.address output
         }
       if$
+      format.date "year" output.check
+      format.bvolume output
     }
     { format.incoll.inproc.crossref output.nonnull
     }
@@ -1326,19 +1329,21 @@ FUNCTION {proceedings}
   if$
   format.btitle "title" output.check
   format.bvolume output
-  format.number.series output
   editor empty$
     { publisher empty$
-        'skip$
+        {  format.number.series output }
         {
+          format.number.series output
           format.publisher.address output
         }
       if$
     }
     { publisher empty$
         {
+          format.number.series output
           format.organization.address output }
         {
+          format.number.series output
           organization "organization" bibinfo.check output
           format.publisher.address output
         }

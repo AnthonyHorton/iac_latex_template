@@ -23,22 +23,18 @@ C.~Sandin, {The influence of diffuse scattered light. II. Observations of
   Astrophys. 577 (2015) A106.
 
 \bibitem{Duc2014}
-P.-A. Duc, et~al., {The ATLAS 3D project – XXIX. The new look of early-type
+P.-A. Duc, et~al., {The ATLAS 3D project -- XXIX. The new look of early-type
   galaxies and surrounding fields disclosed by extremely deep optical images},
-  MNRAS 446, October (2015) 120--143.
+  MNRAS 446, 1 (2015) 120--143.
 
 \bibitem{Abraham2014}
-R.~G. Abraham, P.~G. van Dokkum, {Ultra–Low Surface Brightness Imaging with
-  the Dragonfly Telephoto Array}, Publ. Astron. Soc. Pacific 126, 935 (2014)
+R.~G. Abraham, P.~G. van Dokkum, {Ultra-Low Surface Brightness Imaging with the
+  Dragonfly Telephoto Array}, Publ. Astron. Soc. Pacific 126, 935 (2014)
   55--69.
 
 \bibitem{VanDokkum2015}
 P.~G. van Dokkum, et~al., {Forty-Seven Milky Way-Sized, Extremely Diffuse
   Galaxies in the Coma Cluster}, Astrophys. J. 798, 2 (2015) L45.
-
-\bibitem{Horton2016}
-A.~Horton, et~al., {The Australian Space Eye: studying the history of galaxy
-  formation with a CubeSat}, Proc. SPIE .
 
 \bibitem{Schlafly2017}
 E.~F. Schlafly, et~al., {Mapping the Extinction Curve in 3D: Structure on
@@ -46,7 +42,7 @@ E.~F. Schlafly, et~al., {Mapping the Extinction Curve in 3D: Structure on
 
 \bibitem{Cooray2016}
 A.~Cooray, {Extragalactic Background Light: Measurements and Applications}, R.
-  Soc. Open Sci. 3, 3.
+  Soc. Open Sci. 3, 3 (2016) 150555.
 
 \bibitem{Bernstein2007}
 R.~A. Bernstein, {The Optical Extragalactic Background Light: Revisions and
@@ -57,17 +53,16 @@ F.~Aharonian, et~al., {A low level of extragalactic background light as
   revealed by gamma-rays from blazars.}, Nature 440, 7087 (2006) 1018--1021.
 
 \bibitem{Tsumura2010}
-K.~Tsumura, et~al., {OBSERVATIONS OF THE NEAR-INFRARED SPECTRUM OF THE ZODIACAL
-  LIGHT WITH CIBER}, Astrophys. J. 719, 1 (2010) 394--402.
+K.~Tsumura, et~al., {Observations of the near-infrared spectrum of the zodiacal
+  light with CIBER}, Astrophys. J. 719, 1 (2010) 394--402.
 
 \bibitem{Lanz2014}
 A.~Lanz, et~al., {Studying extragalactic background fluctuations with the
-  Cosmic Infrared Background ExpeRiment 2 (CIBER-2)}, vol. 9143, International
-  Society for Optics and Photonics, p. 91433N.
+  Cosmic Infrared Background ExpeRiment 2 (CIBER-2)}, Proc. SPIE 9143 (2014) 91433N.
 
 \bibitem{Giavalisco2002}
 M.~Giavalisco, K.~Sahu, R.~Bohlin, {New estimates of the sky background for the
-  hst exposure time calculator}, Tech. rep., STSci (2002).
+  HST exposure time calculator}, Tech. rep., STSci (2002).
 
 \bibitem{Aldering2001}
 G.~Aldering, {SNAP Sky Background at the North Ecliptic Pole}, Tech. Rep.
@@ -79,16 +74,16 @@ M.~Zemcov, et~al., {The Cosmic Infrared Background Experiment (CIBER): a
   Light}, Astrophys. J. Suppl. Ser. 207, 2 (2013) 31.
 
 \bibitem{Korngut2013}
-P.~M. Korngut, et~al., {THE COSMIC INFRARED BACKGROUND EXPERIMENT ( CIBER ):
-  THE NARROW-BAND SPECTROMETER}, Astrophys. J. Suppl. Ser. 207, 2 (2013) 34.
+P.~M. Korngut, et~al., {The cosmic infrared background experiment (CIBER): The
+  narrow-band spectrometer}, Astrophys. J. Suppl. Ser. 207, 2 (2013) 34.
 
 \bibitem{Liou1995}
 J.~Liou, S.~Dermott, Y.~Xu, {The contribution of cometary dust to the zodiacal
   cloud}, Planet. Space Sci. 43, 6 (1995) 717--722.
 
 \bibitem{Nesvorny2010}
-D.~Nesvorn{\'{y}}, et~al., {COMETARY ORIGIN OF THE ZODIACAL CLOUD AND
-  CARBONACEOUS MICROMETEORITES. IMPLICATIONS FOR HOT DEBRIS DISKS}, Astrophys.
+D.~Nesvorn{\'{y}}, et~al., {Cometary origin of the zodiacal cloud and
+  carbonaceous micrometeorites. Implications for hot debris disks.}, Astrophys.
   J. 713, 2 (2010) 816--836.
 
 \bibitem{Kawara2017}
@@ -97,29 +92,24 @@ K.~Kawara, et~al., {Ultraviolet to optical diffuse sky emission as seen by the
   69, 2 (2017) 211.
 
 \bibitem{Yang2015}
-H.~Yang, M.~Ishiguro, {ORIGIN OF INTERPLANETARY DUST THROUGH OPTICAL PROPERTIES
-  OF ZODIACAL LIGHT}, Astrophys. J. 813, 2 (2015) 87.
+H.~Yang, M.~Ishiguro, {Origin of interplanetary dust through optical properties
+  of zodiacal light}, Astrophys. J. 813, 2 (2015) 87.
 
 \bibitem{Hevner2011}
-R.~Hevner, et~al., {An Advanced Standard for CubeSats}, in: 25th Annu. AIAA/USU
-  Conf. Small Satell., pp. SC11--II--3.
+R.~Hevner, et~al., {An Advanced Standard for CubeSats}, SC11--II--3, 25th Annu. AIAA/USU
+  Conf. Small Satell., 2011.
 
 \bibitem{Jorden2014}
 P.~R. Jorden, et~al., {e2v new CCD and CMOS technology developments for
-  astronomical sensors}, in: A.~D. Holland, J.~Beletic (Eds.), Proc. SPIE 9154,
-  High Energy, Opt. Infrared Detect. Astron. VI, vol. 9154, International
-  Society for Optics and Photonics, pp. 1--15.
+  astronomical sensors}, Proc. SPIE 9154 (2014) 91540M.
 
 \bibitem{Soman2014}
 M.~Soman, et~al., {Design and characterisation of the new CIS115 sensor for
-  JANUS, the high resolution camera on JUICE}, in: A.~D. Holland, J.~Beletic
-  (Eds.), SPIE Astron. Telesc. + Instrum., vol. 9154, International Society for
-  Optics and Photonics, p. 915407.
+  JANUS, the high resolution camera on JUICE}, Proc. SPIE 9154 (2014) 915407.
 
 \bibitem{Wang2014}
 S.-Y. Wang, et~al., {Characteristic of e2v CMOS sensors for astronomical
-  applications}, in: A.~D. Holland, J.~Beletic (Eds.), SPIE Astron. Telesc. +
-  Instrum., International Society for Optics and Photonics, p. 91542I.
+  applications}, Proc. SPIE 9154 (2014) 91542I.
 
 \bibitem{Colina1996}
 L.~Colina, R.~C. Bohlin, F.~Castelli, {The 0.12-2.5 micron Absolute Flux
@@ -136,13 +126,13 @@ E.~L. Fitzpatrick, {Correcting for the Effects of Interstellar Extinction},
 
 \bibitem{Reisenfeld2015}
 S.~Reisenfeld, L.~Spitler, A.~Horton, {The Australian Space Eye: Ultra-faint
-  astronomy imaging from Space}, in: 33rd AIAA Int. Commun. Satell. Syst. Conf.
-  Exhib., American Institute of Aeronautics and Astronautics.
+  astronomy imaging from Space}, 33rd AIAA Int. Commun. Satell. Syst. Conf.
+  Exhib., American Institute of Aeronautics and Astronautics, 2015.
 
 \bibitem{Trujillo2015}
-I.~Trujillo, J.~Fliri, {BEYOND 31 mag arcsec −2 : THE FRONTIER OF LOW SURFACE
-  BRIGHTNESS IMAGING WITH THE LARGEST OPTICAL TELESCOPES}, Astrophys. J. 823, 2
-  (2016) 123.
+I.~Trujillo, J.~Fliri, {Beyond 31 mag/arcsec{\^{}}2 : The frontier of low
+  surface brightness imaging with the largest optical telescopes}, Astrophys.
+  J. 823, 2 (2016) 123.
 
 \bibitem{Robitaille2013}
 T.~P. Robitaille, et~al., {Astropy: A community Python package for astronomy},

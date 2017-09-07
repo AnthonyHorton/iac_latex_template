@@ -54,18 +54,19 @@
 \author[f]{John Bowen}
 \author[f]{Solomon Westerman}
 \author[f,g]{Jordi Puig-Suari}
-\author[b]{Sam Reisenfeld}
+\author[h]{Sam Reisenfeld}
 \author[a]{Jon Lawrence}
 \author[a]{Ross Zhelem}
 \author[c]{Matthew Colless}
 \author[d]{Russell Boyce}
-\affil[a]{Australian Astronomical Observatory, Sydney, Australia}
-\affil[b]{Macquarie University, Sydney, Australia}
-\affil[c]{Space Industry Association of Australia, Canberra, Australia}
-\affil[d]{Australian National University, Canberra, Australia}
-\affil[e]{UNSW Canberra, Canberra, Australia}
-\affil[f]{Tyvak International SRL, Irvine CA, USA}
-\affil[g]{California Polytechnic State University, San Luis Obispo CA, USA}
+\affil[a]{Australian Astronomical Observatory, 105 Delhi Road, North Ryde NSW 2113, Australia}
+\affil[b]{Department of Physics \&\ Astronomy, Macquarie University, North Ryde NSW 2109, Australia}
+\affil[c]{Space Industry Association of Australia Limited, ACN 613 961 005, c/- Nova Systems, 27-31 London Road, Mile End SA 5031, Australia}
+\affil[d]{Research School of Astronomy \&\ Astrophysics, Australian National University, Cotter Road, Weston Creek ACT 2611, Australia}
+\affil[e]{School of Engineering \&\ IT, UNSW Canberra, Northcott Drive, Campbell ACT 2600, Australia}
+\affil[f]{Tyvak Inc., 15265 Alton Parkway, Suite 200, Irvine, CA 92618, USA}
+\affil[g]{Aerospace Engineering Department, California Polytechnic State University, 1 Grand Avenue, San Luis Obispo, CA 93407, USA}
+\affil[h]{Department of Engineering, Macquarie University, North Ryde NSW 2109, Australia}
 \affil[{*}]{\normalfont{Corresponding author, \href{mailto:anthony.horton@aao.gov.au}{anthony.horton@aao.gov.au}}}
 
 \abstract{The Australian Space Eye is a proposed astronomical telescope based on a \SI{6}{U} CubeSat platform. The Space
@@ -147,7 +148,7 @@ on an array of telephoto camera lenses \cite{Abraham2014}.  This instrument exhi
 diffraction/scattering/internal reflections than other telescopes for which comparable data are available
 \cite{Abraham2014,Sandin2014} and the system has produced impressive results, including the discovery of a new class of
 `ultra-diffuse galaxies'\cite{VanDokkum2015}.  Two of this paper's authors (AJH \&\ LS) are currently assembling a
-ground based instrument based on the same principles, the Huntsman Telephoto Array\cite{Horton2016}.
+ground based instrument based on the same principles, the Huntsman Telephoto Array.
 
 We conclude that a CubeSat based astronomical telescope may be scientifically competitive, especially an optimised
 telescope performing measurements that are typically limited by systematic errors. We identify the
@@ -206,7 +207,7 @@ constraints about important past events (e.g.\ the late heavy bombardment) and g
 exoplanet systems with younger, hot dust disks (e.g. Nesvorn\'y et al.\ 2010\cite{Nesvorny2010}). Zodiacal light
 measurements have the potential to resolve this mystery (Yang \&\ Ishiguro 2015\cite{Yang2015}), however previous
 observations were limited in their wavelength, temporal and/or spatial coverage. Space Eye will overcome these
-limitations to produce the a detailed map of the Solar System's dust cloud, and thereby make a significant contribution to
+limitations to produce a detailed map of the Solar System's dust cloud, and thereby make a significant contribution to
 our understanding of the past history of the Solar System.
 
 \subsection{Coordinated observations with flagship observatories}
@@ -234,6 +235,22 @@ is shown in Fig.~\ref{fig:render}.
 \subsubsection{Requirements}
 \label{sec:payloadreqs}
 
+\begin{table*}[bp]
+  \caption{Summary of main optical payload requirements}
+  \label{tab:payload}
+  \begin{center}
+    \begin{tabular}{lc}
+      \toprule \rule[-1ex]{0pt}{3.5ex} Field of view & $>\SI{1}{\degree}$ (goal $\sim\SI{2}{\degree}$) \\
+      \rule[-1ex]{0pt}{3.5ex} Pixel scale & \SI{3}{\arcsecond\per\pix}  \\
+      \rule[-1ex]{0pt}{3.5ex} Wavelength range & 700--\SI{1000}{\nano\metre} \\
+      \rule[-1ex]{0pt}{3.5ex} Aperture diameter & \SI{90}{\milli\metre} \\
+      \rule[-1ex]{0pt}{3.5ex} Optical system dimensions & $300 \times 100 \times \SI{100}{\milli\metre}$ max \\
+      \rule[-1ex]{0pt}{3.5ex} Payload electronics volume & $<\SI{2}{U}$ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table*}
+
 The scientific goals described in Sec.~\ref{sec:aims} call for a wide field imaging instrument with moderate spatial
 resolution, an exceptionally `clean' and stable point spread function (PSF), and the highest low light sensitivity
 achievable within the other constraints of the platform. The imager must be capable of both broadband imaging in the
@@ -258,22 +275,6 @@ of PSF fitting and subsequent point source subtraction. With the selected image 
 Space Eye can stil be sky background noise
 limited at this pixel scale.
 
-\begin{table*}[bp]
-  \caption{Summary of main optical payload requirements}
-  \label{tab:payload}
-  \begin{center}
-    \begin{tabular}{lc}
-      \toprule \rule[-1ex]{0pt}{3.5ex} Field of view & $>\SI{1}{\degree}$ (goal $\sim\SI{2}{\degree}$) \\
-      \rule[-1ex]{0pt}{3.5ex} Pixel scale & \SI{3}{\arcsecond\per\pix}  \\
-      \rule[-1ex]{0pt}{3.5ex} Wavelength range & 700--\SI{1000}{\nano\metre} \\
-      \rule[-1ex]{0pt}{3.5ex} Aperture diameter & \SI{90}{\milli\metre} \\
-      \rule[-1ex]{0pt}{3.5ex} Optical system dimensions & $300 \times 100 \times \SI{100}{\milli\metre}$ max \\
-      \rule[-1ex]{0pt}{3.5ex} Payload electronics volume & $<\SI{2}{U}$ \\
-      \bottomrule
-    \end{tabular}
-  \end{center}
-\end{table*}
-
 To accomplish the required measurements of both broadband $i'$ and $z'$ surface brightness and Calcium absorption we
 will use a set of 6 slightly modified $i'$ and $z'$ band filters with band edges positioned around the strong
 absorption line at \SI{854.2}{\nano\metre}. More details are discussed in Sec.~\ref{sec:mosaic}.
@@ -287,15 +288,6 @@ and the total instrumental noise is below the Poisson noise from the sky backgro
 
 \subsubsection{Image sensor}
 \label{sec:imagesensor}
-
-The choice of image sensor is key, not only is it the biggest variable in determining the overall sensitivity of the
-system but the specifications for many of the other subsystems (optics, data handling, downlink capacity, thermal
-control, power, etc.) depend on the specifications of the sensor.
-
-Astronomical instruments operating at these wavelengths typically use charge-coupled device (CCD) image sensors however
-for Space Eye we have selected the CIS115 CMOS image sensor from e2v\cite{Jorden2014}. The CIS115 is a back-side
-illuminated image sensor with $2000 \times 1504$ pixels on a \SI{7}{\micron} pitch. The main specifications, taken from
-the draft e2v datasheet, are given in Tab.~\ref{tab:cis115}.
 
 \begin{table*}[bp]
   \caption{Summary of CIS115 specifications taken from draft datasheet dated December 2015. All performance values are
@@ -317,6 +309,28 @@ the draft e2v datasheet, are given in Tab.~\ref{tab:cis115}.
   \end{center}
 \end{table*}
 
+\begin{figure}[tp]
+  \center
+  \includegraphics[width=\columnwidth]{figures/CIS115QE.pdf}
+  \caption{\label{fig:qe}Predicted CIS115 quantum efficiency as a function of wavelength at both \SI{+20}{\celsius} and
+    \SI{-40}{\celsius}, data from Soman et al.\cite{Soman2014}}
+\end{figure}
+
+\begin{figure}[tp]
+  \center \includegraphics[width=\columnwidth]{figures/CIS115DC.pdf}
+  \caption{\label{fig:dc}CIS115 dark current as a function of temperature, based on the model from Wang et al.
+    \cite{Wang2014}}
+\end{figure}
+
+The choice of image sensor is key, not only is it the biggest variable in determining the overall sensitivity of the
+system but the specifications for many of the other subsystems (optics, data handling, downlink capacity, thermal
+control, power, etc.) depend on the specifications of the sensor.
+
+Astronomical instruments operating at these wavelengths typically use charge-coupled device (CCD) image sensors however
+for Space Eye we have selected the CIS115 CMOS image sensor from e2v\cite{Jorden2014}. The CIS115 is a back-side
+illuminated image sensor with $2000 \times 1504$ pixels on a \SI{7}{\micron} pitch. The main specifications, taken from
+the draft e2v datasheet, are given in Tab.~\ref{tab:cis115}.
+
 The CIS115 is a new image sensor developed with space based scientific imaging in mind, in particular the ESA JUICE
 mission. In general its performance is close to that of back side illuminated CCD image sensors operated in inverted
 mode, the main difference being a 2--$3\times$ higher read noise when compared to the very best CCDs. CMOS image sensors
@@ -329,13 +343,6 @@ ability to operate regions of the sensor independently of others, opening up the
 high frame rate autoguiding/star tracking while simultaneously taking a long exposure with the rest of the sensor
 (`on-chip guiding').
 
-\begin{figure}[tp]
-  \center
-  \includegraphics[width=\columnwidth]{figures/CIS115QE.pdf}
-  \caption{\label{fig:qe}Predicted CIS115 quantum efficiency as a function of wavelength at both \SI{+20}{\celsius} and
-    \SI{-40}{\celsius}, data from Soman et al.\cite{Soman2014}}
-\end{figure}
-
 Predicted quantum efficiency data for the CIS115 are plotted in Fig.~\ref{fig:qe}. These data are reproduced from Soman
 et al.\cite{Soman2014}\ and we regard them as conservative estimates, Wang et al.\cite{Wang2014}\ report slightly higher
 peak QE from both their own and e2v's measurements of a prototype device (CIS107). The decline in QE for wavelengths
@@ -345,12 +352,6 @@ higher QE, due to the greater effective thickness of their photosensitive layer.
 for Space Eye however as those currently available have large pixels and, more importantly, require deep cooling
 ($<\SI{-100}{\celsius}$) to control dark current due to their non-inverted operation. Deep depletion/high rho CMOS image
 sensors show promise however at the time of writing no devices suitable for Space Eye were known to the authors.
-
-\begin{figure}[tp]
-  \center \includegraphics[width=\columnwidth]{figures/CIS115DC.pdf}
-  \caption{\label{fig:dc}CIS115 dark current as a function of temperature, based on the model from Wang et al.
-    \cite{Wang2014}}
-\end{figure}
 
 The dark current of the CIS107 prototype was measured by Wang et al.\ between +\SI{27}{\celsius} and \SI{-23}{\celsius}
 and they found the expected exponential temperature dependence, with a halving of dark current for every
@@ -435,6 +436,18 @@ dark current measurements.
 \subsubsection{Mosaic filter}
 \label{sec:mosaic}
 
+\begin{figure}[tp]
+  \center \includegraphics[width=0.7\columnwidth]{figures/mosaic.pdf}
+  \caption{\label{fig:mosaic}Example mosaic filter layout. Each filter covers an area of $333 \times \SI{376}{\pix}$,
+    $\SI{16.7}{\arcminute} \times \SI{18.8}{\arcminute}$ on sky.}
+\end{figure}
+
+\begin{figure}[tp]
+  \center \includegraphics[width=\columnwidth]{figures/filters.pdf}
+  \caption{\label{fig:filters}Nominal filter transmission profiles shown together with a model of the zodiacal light
+    photon spectral flux density.}
+\end{figure}
+
 In order to provide the necessary data to allow both broadband $i'$ and $z'$ band imagery and seperate measurements of
 the Zodiacal light and extragalactic components of the sky background we propose the use of 6 broadband filters, 3
 variants on the $i'$ filter and 3 variants on the $z'$ filter. Nominal transmission profiles for these filters are shown
@@ -455,19 +468,30 @@ the 6 different filters by a fixed mosaic filter at the focal plane, an example 
 Fig.~\ref{fig:mosaic}. By taking sequences of 6 images with pointing offsets equal to the dimensions of the filter
 regions contiguous images can be built up for each filter.
 
-\begin{figure}[htp]
-  \center \includegraphics[width=0.7\columnwidth]{figures/mosaic.pdf}
-  \caption{\label{fig:mosaic}Example mosaic filter layout. Each filter covers an area of $333 \times \SI{376}{\pix}$,
-    $\SI{16.7}{\arcminute} \times \SI{18.8}{\arcminute}$ on sky.}
-\end{figure}
-
-\begin{figure}[htp]
-  \center \includegraphics[width=\columnwidth]{figures/filters.pdf}
-  \caption{\label{fig:filters}Nominal filter transmission profiles shown together with a model of the zodiacal light
-    photon spectral flux density.}
-\end{figure}
-
 \subsubsection{Performance modelling} \label{sec:perf}
+
+\begin{figure}[tp]
+  \center \includegraphics[width=\columnwidth]{figures/relsnr.pdf}
+  \caption{\label{fig:relsnr}Predicted SNR relative to the SNR without instrumental noise for the $i2$ and $z2$ filters
+    as a function sub-exposure time for a range of image sensor temperatures. The calculation uses the ecliptic pole
+    zodical light surface brightness values.}
+\end{figure}
+
+\begin{figure}[tp]
+  \center \includegraphics[width=\columnwidth]{figures/sens.pdf}
+  \caption{\label{fig:sens}Predicted surface brightness spectral flux density corresponding to a signal to noise ratio
+    of 1 per pixel as a function of total exposure time per filter. The calculcation is for the ecliptic pole Zodiacal
+    light surface brightness, an image sensor temperature of \SI{-40}{\celsius} and sub-exposures of \SI{600}{\second}.}
+\end{figure}
+
+\begin{figure}[tp]
+  \center \includegraphics[width=\columnwidth]{figures/i_rel_sens.pdf}
+  \caption{\label{fig:sensmap}Predicted $i'$ band sensitivity relative to the ecliptic pole, zero extinction case. The
+    maps show $\SI{45}{\degree}\times\SI{45}{\degree}$ gnomonic projections centred on the north and south ecliptic
+    poles in March, June, September and December, with a colourmap running from halved sensitivity (black) to full
+    sensitivity (white). Equatorial coordinate grids are also shown, with 1 hour spacing in RA and \SI{10}{\degree} in
+    dec, as well as the outlines of the designated target regions.}
+\end{figure}
 
 In order to determine appropriate operational parameters and predict the approximate sensitivity of Space Eye we have
 developed performance models for the optical payload. These are not full end-to-end simulations but are instead
@@ -488,13 +512,6 @@ and read noise we can quantify the degree to which instrumental noise is effecti
 summarised in Fig.~\ref{fig:relsnr}, which shows the SNR relative to the SNR without instrumental noise for the $i2$ and
 $z2$ filters for a range of image sensor temperatures and sub-exposure time.
 
-\begin{figure}[htp]
-  \center \includegraphics[width=\columnwidth]{figures/relsnr.pdf}
-  \caption{\label{fig:relsnr}Predicted SNR relative to the SNR without instrumental noise for the $i2$ and $z2$ filters
-    as a function sub-exposure time for a range of image sensor temperatures. The calculation uses the ecliptic pole
-    zodical light surface brightness values.}
-\end{figure}
-
 The calculation uses the zodiacal light model surface brightness values for the ecliptic poles, which are close to the
 minimum possible value and therefore place the most stringent demands on instrumental noise. Due primarily to the
 falling image sensor QE the $z'$ band is more sensitive to instrumental noise and drives the selection of operating
@@ -512,13 +529,6 @@ $1\sigma$ per pixel sensitivity limits of \SI{1.1e-20}{\watt\per\metre\squared\p
 \SI{1.9e-20}{\watt\per\metre\squared\per\tarcsecond\squared\per\micron} for $i'$ and $z'$ bands respectively, equivalent
 to 30.5 and 29.6 in AB magnitude surface brightness units.
 
-\begin{figure}[htp]
-  \center \includegraphics[width=\columnwidth]{figures/sens.pdf}
-  \caption{\label{fig:sens}Predicted surface brightness spectral flux density corresponding to a signal to noise ratio
-    of 1 per pixel as a function of total exposure time per filter. The calculcation is for the ecliptic pole Zodiacal
-    light surface brightness, an image sensor temperature of \SI{-40}{\celsius} and sub-exposures of \SI{600}{\second}.}
-\end{figure}
-
 The zodiacal light model includes spatial (and seasonal) variations, allowing us to calculate how the predicted
 sensitivity varies with position on the sky. For extragalactic sources, such as other galaxies and the CIB
 , we must also take into account extinction by Galactic dust. For this we use the all sky dust reddening
@@ -531,15 +541,6 @@ to minimise its effects targets should be chosen from within regions between 15.
 \SI{+55}{\degree} and \SI{+60}{\degree} declination in the north, and between 4 and 5 hours Right Ascension and
 \SI{-50}{\degree} and \SI{-60}{\degree} degrees declination
 in the south.
-
-\begin{figure}[htp]
-  \center \includegraphics[width=\columnwidth]{figures/i_rel_sens.pdf}
-  \caption{\label{fig:sensmap}Predicted $i'$ band sensitivity relative to the ecliptic pole, zero extinction case. The
-    maps show $\SI{45}{\degree}\times\SI{45}{\degree}$ gnomonic projections centred on the north and south ecliptic
-    poles in March, June, September and December, with a colourmap running from halved sensitivity (black) to full
-    sensitivity (white). Equatorial coordinate grids are also shown, with 1 hour spacing in RA and \SI{10}{\degree} in
-    dec, as well as the outlines of the designated target regions.}
-\end{figure}
 
 \subsection{Spacecraft Bus}
 
@@ -560,7 +561,7 @@ systems will be sufficient given the expected data rates (see section \ref{sec:c
 \subsubsection{Attitude determination \&\ control}
 \label{sec:adcs}
 
-\begin{figure}[htp]
+\begin{figure}[tp]
   \center \includegraphics[width=\columnwidth]{figures/adcs.png}
   \caption{\label{fig:adcs}Main components of the standard Tyvak Endeavour attitude determination and control system
     (ADCS). Space Eye's ADCS will be based on an updated Endeavour system.}
@@ -612,7 +613,7 @@ algorithms to drive the second stage control system.
 \subsubsection{Thermal control}
 \label{sec:thermal}
 
-\begin{figure*}[htp]
+\begin{figure*}[tp]
   \begin{center}
     \begin{tabular}{m{0.45\textwidth} m{0.45\textwidth}}
       \includegraphics[width=0.45\textwidth]{figures/radiator.png} & \includegraphics[width=0.45\textwidth]{figures/orbit.png}
@@ -623,7 +624,7 @@ algorithms to drive the second stage control system.
     without Earth IR avoidance manoeuvres outside of the observation windows (right).}
 \end{figure*}
 
-\begin{figure}[htp]
+\begin{figure}[tp]
   \center \includegraphics[width=\columnwidth]{figures/thermal.pdf}
   \caption{\label{fig:thermalplots} Predicted image sensor and thermal radiator temperature variations during several
     orbits with a thermal IR baffle, both with and without Earth IR avoidance manoeuvres outside of the observation
