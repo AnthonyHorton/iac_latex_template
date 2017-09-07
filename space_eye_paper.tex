@@ -209,23 +209,13 @@ observations were limited in their wavelength, temporal and/or spatial coverage.
 limitations to produce the most detailed map of the Solar System's dust cloud, and therby make a major contribution to
 our understanding of the past history of the Solar System.
 
-\subsection{Low Surface Brightness Galaxies}
+\subsection{Coordinated observations with flagship observatories}
 
-A new ground-based imaging system called the Dragonfly Telephoto Array\cite{Abraham2014} uses commercial-off-the-shelf
-camera lenses to reach $16\times$ (3 magnitudes) fainter surface brightness levels than existing telescopes at optical
-wavelengths (0.4--\SI{0.7}{\micron}, $g'$ and $r'$ bands). The key innovation is the use of unobscured refracting
-optics, which significantly reduce scattered and diffracted light compared to conventional large reflecting telescopes
-and bring the limiting systematic uncertainties down to
-\SI{8e-21}{\watt\per\square\meter\per\micron\per\square\tarcsecond} (32 AB mag./arcsecond$^2$ in $g'$)\cite{Sandin2014}.
-The Dragonfly observing system has led to a number of important results, including finding an entirely new class of
-galaxy (e.g.\ van Dokkum, Abraham, Merritt 2014\cite{VanDokkum2014}, van Dokkum et al.\ 2015\cite{VanDokkum2015}).
-
-By adapting the Dragonfly concept to observing galaxies at longer wavelengths of light from space we can constrain the
-stellar population properties of these galaxies. The Australian Space Eye will target several nearby galaxies in order
-to obtain images at the lowest possible surface brightness levels and detect extremely faint structures in their
-outskirts. When the Space Eye $i'$ and $z'$ band imaging is combined with optical $g'$ and $r'$ band imaging from the
-Dragonfly and Huntsman\cite{Horton2016} ground-based observing facilities we will have valuable information about the
-stellar age and chemical content of these faint structures.
+The unique ability of Space Eye to isolate and measure both the CIB and zodiacal light complements the capabilities of
+the flagship James Webb Space Telescope (JWST). By observing fields that will also be targeted by JWST Space Eye can
+provide additional constraints on the sky background for the JWST observations, thereby improving zodiacal light
+subtraction, enabling new science, and extending the wavelength coverage of CIB measurements from the Space Eye
+bands out to \SI{15}{\micro\metre}.
 
 \section{Space Eye Concept}
 
@@ -234,7 +224,7 @@ housing an optical imaging telescope. The specifications of the system are drive
 Sec.~\ref{sec:aims}, subject to the constraints discussed in Sec.~\ref{sec:intro}. An artist's impression of Space Eye
 is shown in Fig.~\ref{fig:render}.
 
-\begin{figure}[htp]
+\begin{figure}[tp]
   \includegraphics[width=\columnwidth]{figures/ASE-2016-a.png}
   \caption{\label{fig:render}Artist's impression of the Australian Space Eye in orbit over the Tasman Sea.}
 \end{figure}
@@ -263,13 +253,12 @@ a desire for a field of view at least \SI{1}{\degree} across, preferably close t
 We have selected a image scale of \SI{3}{\arcsecond\per\pix}, this is close to Nyquist sampling of the diffraction
 limited PSF at the Space Eye aperture size and operating wavelengths ($1.22 \lambda / D =
 \SI{2.0}{\arcsecond}$--\SI{2.8}{\arcsecond}). Coarser spatial sampling could increase the signal to noise ratio for
-diffuse sources however we are wary of significantly undersampling the PSF due to the potential impact on the accuracy
-of PSF fitting and subsequent point source subtraction. We will show that Space Eye can still be sky background noise
-limited at this pixel scale. \SI{3}{\arcsecond\per\pix} is also a good match to the pixel scale of ground based low
-surface brightness imaging facilities such as the Dragonfly Telephoto Array\cite{Abraham2014} and Huntsman Telephoto
-Array\cite{Horton2016}.
+diffuse sources however we avoid significant undersampling of the PSF due to the impact on the accuracy
+of PSF fitting and subsequent point source subtraction. With the selected image sensor (section \ref{sec:imagesensor})
+Space Eye can stil be sky background noise
+limited at this pixel scale.
 
-\begin{table*}[hbp]
+\begin{table*}[bp]
   \caption{Summary of main optical payload requirements}
   \label{tab:payload}
   \begin{center}
@@ -286,29 +275,18 @@ Array\cite{Horton2016}.
 \end{table*}
 
 To accomplish the required measurements of both broadband $i'$ and $z'$ surface brightness and Calcium absorption we
-proposed to use a set of 6 slightly modified $i'$ and $z'$ band filters with band edges positioned around the strong
-absoprtion line at \SI{854.2}{\nano\metre}. More details are discussed in Sec.~\ref{sec:mosaic}.
+will use a set of 6 slightly modified $i'$ and $z'$ band filters with band edges positioned around the strong
+absorption line at \SI{854.2}{\nano\metre}. More details are discussed in Sec.~\ref{sec:mosaic}.
 
 For Space Eye the requirement for a clean and stable PSF translates to minimising all sources of stray light, including
 surface and bulk scattering, internal reflections, stray sunlight/Earthshine/moonlight and diffraction.
-
-\begin{figure}[htp]
-  \includegraphics[width=\columnwidth]{figures/wings.png}
-  \caption{\label{fig:wings}Surface plots of simulated images showing how stray (scattered) light from each star is
-    higher in conventional telescopes than in Space Eye. The accumulation of stray light from all the stars in a field
-    limits access to the underlying Cosmic Infrared Background.}
-\end{figure}
 
 The highest possible sensitivity will be achieved when the optical aperture is as large as it can be within the space
 constraints of the CubeSat, the optical throughput and quantum efficiency (QE) of the image sensor are close to 100\%,
 and the total instrumental noise is below the Poisson noise from the sky background light.
 
 \subsubsection{Image sensor}
-
-\begin{figure}[htp]
-  \center \includegraphics[width=0.7\columnwidth]{figures/cis115.png}
-  \caption{\label{fig:cis115}CIS-115 CMOS image sensor, photo credit e2v.}
-\end{figure}
+\label{sec:imagesensor}
 
 The choice of image sensor is key, not only is it the biggest variable in determining the overall sensitivity of the
 system but the specifications for many of the other subsystems (optics, data handling, downlink capacity, thermal
@@ -341,7 +319,7 @@ the draft e2v datasheet, are given in Tab.~\ref{tab:cis115}.
 
 The CIS115 is a new image sensor developed with space based scientific imaging in mind, in particular the ESA JUICE
 mission. In general its performance is close to that of back side illuminated CCD image sensors operated in inverted
-mode, the main difference being a 2--$3\times$ higher read noise when compared to the best CCDs. CMOS image sensors
+mode, the main difference being a 2--$3\times$ higher read noise when compared to the very best CCDs. CMOS image sensors
 offer a number of advantages for a CubeSat space telescope however, including lower power consumption and greater
 resistance to radiation induced damage than CCDs. Of particular importance to Space Eye is the relatively small pixel
 size, \SI{7}{\micron} versus the 12--\SI{15}{\micron} of available scientific CCDs. This factor of 2 reduction in pixel
@@ -351,7 +329,7 @@ ability to operate regions of the sensor independently of others, opening up the
 high frame rate autoguiding/star tracking while simultaneously taking a long exposure with the rest of the sensor
 (`on-chip guiding').
 
-\begin{figure}[htp]
+\begin{figure}[tp]
   \center
   \includegraphics[width=\columnwidth]{figures/CIS115QE.pdf}
   \caption{\label{fig:qe}Predicted CIS115 quantum efficiency as a function of wavelength at both \SI{+20}{\celsius} and
@@ -368,14 +346,14 @@ for Space Eye however as those currently available have large pixels and, more i
 ($<\SI{-100}{\celsius}$) to control dark current due to their non-inverted operation. Deep depletion/high rho CMOS image
 sensors show promise however at the time of writing no devices suitable for Space Eye were known to the authors.
 
-\begin{figure}[htp]
+\begin{figure}[tp]
   \center \includegraphics[width=\columnwidth]{figures/CIS115DC.pdf}
   \caption{\label{fig:dc}CIS115 dark current as a function of temperature, based on the model from Wang et al.
     \cite{Wang2014}}
 \end{figure}
 
 The dark current of the CIS107 prototype was measured by Wang et al.\ between +\SI{27}{\celsius} and \SI{-23}{\celsius}
-and they found the expected exponential temperature dependence with a halving of dark current for every
+and they found the expected exponential temperature dependence, with a halving of dark current for every
 \SI{6.2}{\celsius} drop. Their best fit model is shown in Fig.~\ref{fig:dc}. The dark current of cooled production
 CIS115 image sensors may be somewhat lower, e2v's draft datasheet suggests a typical dark current that is
 $\sim\SI{50}{\percent}$ lower at \SI{20}{\celsius} that also falls more rapidly with cooling, halving with each
@@ -385,7 +363,7 @@ noise on cooling, to approximately \SI{4}{\el}.
 
 \subsubsection{Telescope optics}
 
-\begin{table}[hbp]
+\begin{table}[bp]
   \caption{Summary of telescope optics specifications}
   \label{tab:optics}
   \begin{center}
@@ -401,14 +379,21 @@ noise on cooling, to approximately \SI{4}{\el}.
   \end{center}
 \end{table}
 
-\begin{figure}[htp]
+\begin{figure}[tp]
   \center \includegraphics[width=\columnwidth]{figures/spie-layout.png}
   \caption{\label{fig:optics}Cross section optical layout diagram of the baseline design for the Australian Space Eye.}
 \end{figure}
 
-\begin{figure}[htp]
+\begin{figure}[tp]
   \center \includegraphics[width=\columnwidth]{figures/ensquared.png}
   \caption{\label{fig:ensquared}Ensquared energy as a function of half-width for the baseline optical design.}
+\end{figure}
+
+\begin{figure}[tp]
+  \includegraphics[width=\columnwidth]{figures/wings.png}
+  \caption{\label{fig:wings}Surface plots of simulated images showing how stray (scattered) light from each star is
+    higher in conventional telescopes than in Space Eye. The accumulation of stray light from all the stars in a field
+    limits access to the underlying Cosmic Infrared Background.}
 \end{figure}
 
 The combination of the requirements from Tab.~\ref{tab:payload} and the image sensor specifications from
@@ -439,7 +424,7 @@ performance anti-reflection coatings will be used to minimise surface scattering
 pursuing the possibility of using nano-structured anti-reflection coatings (as employed in some high end DSLR lenses)
 for this purpose, these are capable of very low reflectivities for a wide range of wavelengths and angles of incidence.
 Internal knife-edge baffles will be used, along with an external deployable baffle designed to prevent illumination of
-the optics by sunlight, Earthshine or moonlight during observations. A 700--\SI{1000}{\nano\metre} bandpass filter will
+the optics by sunlight, earthshine or moonlight during observations. A 700--\SI{1000}{\nano\metre} bandpass filter will
 be applied to the 1st lens surface. A full stray light analysis will be performed as part of a general review of the
 optical design when the project is confirmed however we are confident that we will be able to acheive the required clean
 and stable PSF.
@@ -478,7 +463,7 @@ regions contiguous images can be built up for each filter.
 
 \begin{figure}[htp]
   \center \includegraphics[width=\columnwidth]{figures/filters.pdf}
-  \caption{\label{fig:filters}Nominal filter transmission profiles shown together with a model of the Zodiacal light
+  \caption{\label{fig:filters}Nominal filter transmission profiles shown together with a model of the zodiacal light
     photon spectral flux density.}
 \end{figure}
 
@@ -491,12 +476,12 @@ parametric models, suitable for efficiently exploring parameter space ahead of t
 As noted in Sec.~\ref{sec:payloadreqs} obtaining the maximum sensitivty for a fixed telescope aperture size requires
 both maximising the end-to-end efficiency (optical throughput and image sensor QE) and ensuring the instrumental noise
 sources do not add significantly to the fundamental Poisson noise of the light received from the sky, which at these
-wavelengths is predominantly Zodiacal light. For the purpose of these calculations we use a model for the Zodiacal light
+wavelengths is predominantly Zodiacal light. For the purpose of these calculations we use a model for the zodiacal light
 based on that used by the Hubble Space Telescope Exposure Time Calculator\cite{Giavalisco2002}. The starting point is a
 solar spectrum from Colina, Bohlin and Castelli\cite{Colina1996}, to which we apply a normalisation, reddening and
 spatial dependency following the prescription of Leinert et al.\cite{Leinert1998} with the revised parameters from
 Aldering\cite{Aldering2001}. Using the aperture size, estimated optical throughput, filter transmission profiles, pixel
-scale and image sensor quantum efficiency we can predict the observed Zodiacal light signal (in photo-electrons per
+scale and image sensor quantum efficiency we can predict the observed zodiacal light signal (in photo-electrons per
 second per pixel) and then, with the estimated image sensor dark current and read noise values, we can predict the
 signal to noise ratio (SNR). By comparing the predicted SNR with the value it would have in the absence of dark current
 and read noise we can quantify the degree to which instrumental noise is effecting sensitivity. The key results are
@@ -507,10 +492,10 @@ $z2$ filters for a range of image sensor temperatures and sub-exposure time.
   \center \includegraphics[width=\columnwidth]{figures/relsnr.pdf}
   \caption{\label{fig:relsnr}Predicted SNR relative to the SNR without instrumental noise for the $i2$ and $z2$ filters
     as a function sub-exposure time for a range of image sensor temperatures. The calculation uses the ecliptic pole
-    Zodical light surface brightness values.}
+    zodical light surface brightness values.}
 \end{figure}
 
-The calculation uses the Zodiacal light model surface brightness values for the eclipitc poles, which are close to the
+The calculation uses the zodiacal light model surface brightness values for the ecliptic poles, which are close to the
 minimum possible value and therefore place the most stringent demands on instrumental noise. Due primarily to the
 falling image sensor QE the $z'$ band is more sensitive to instrumental noise and drives the selection of operating
 parameters. Based on these results we have selected a nominal exposure time for individual science exposures of
@@ -534,16 +519,17 @@ to 30.5 and 29.6 in AB magnitude surface brightness units.
     light surface brightness, an image sensor temperature of \SI{-40}{\celsius} and sub-exposures of \SI{600}{\second}.}
 \end{figure}
 
-The Zodiacal light model includes spatial (and seasonal) variations, allowing us to calculate how the predicted
-sensitivity varies with position on the sky. For extragalactic sources, such as other galaxies and the extragalactic
-background light, we must also take into account extinction by Galactic dust. For this we use the all sky dust reddening
+The zodiacal light model includes spatial (and seasonal) variations, allowing us to calculate how the predicted
+sensitivity varies with position on the sky. For extragalactic sources, such as other galaxies and the CIB
+, we must also take into account extinction by Galactic dust. For this we use the all sky dust reddening
 (E(B-V)) maps from the Planck Legacy Archive\cite{Abergel2014} and convert to extinctions at our filter wavlengths using
 the prescription of Fitzpatrick\cite{Fitzpatrick1999}, with $R=3.1$.  Fig \ref{fig:sensmap} shows the resulting $i'$
 band relative sensitivity maps for regions near the ecliptic poles at the times of the equinoxes and solstices. Due to
 the seasonal variation in Zodiacal light regions close to the north ecliptic pole are preferred from February to July,
 and close to the south ecliptic pole from August to January. The tightest constraints come the Galactic dust, in order
-to minimise its effects target should be chosen from within regions between 15.5 and 16.5 hours Right Ascension and +55
-and +60 degrees declination in the north, and between 4 and 5 hours Right Ascension and -50 and -60 degrees declination
+to minimise its effects targets should be chosen from within regions between 15.5 and 16.5 hours Right Ascension and
+\SI{+55}{\degree} and \SI{+60}{\degree} declination in the north, and between 4 and 5 hours Right Ascension and
+\SI{-50}{\degree} and \SI{-60}{\degree} degrees declination
 in the south.
 
 \begin{figure}[htp]
@@ -708,8 +694,9 @@ Sensitivity models for the baseline design which include the effects of Zodiacal
 preferred regions of sky are those close to the North ecliptic pole from February to July and close to the South
 ecliptic pole from August to January, and that the tightest constraints come from Galactic dust (see
 Sec.~\ref{sec:perf}. We can use relative sensitivity maps (Fig.~\ref{fig:sensmap}) to narrow down the optimum target
-field positions to between 15.5 and 16.5 hours Right Ascension and +55 and +60 degrees declination in the north and
-between 4 and 5 hours Right Ascension and -50 and -60 degrees declination in the south. Within each of these regions we
+field positions to between 15.5 and 16.5 hours Right Ascension and \SI{+55}{\degree} and \SI{+60}{\degree}
+declination in the north and between 4 and 5 hours Right Ascension and \SI{-50}{\degree} and \SI{-60}{\degree}
+declination in the south. Within each of these regions we
 expect to select 1 or 2 target fields, and each region will be observed for approximately 6 months before switching to
 the other region.
 
@@ -758,7 +745,8 @@ of field positions, which helps in suppressing residual calibration errors and i
 
 Space Eye will be extensively characterised before launch however these data will be supplemented with on orbit
 calibrations, including dark current measurements and flat fielding using a combination of Earth streak images, stellar
-photometry and median sky frames. The on-orbit measurements will account for changes caused by radiation damage, etc.
+photometry, median sky frames and image sensor flat fielding using an internal screen on the reverse side of the
+shutter. The on-orbit measurements will account for changes caused by radiation damage, etc.
 In addition science observations will be interspersed with exposures of bright stars (`PSF standards') to regularly
 characterise the faint, outer parts of the PSF wings in a strategy similar to that reported by Tujillo and
 Fliri\cite{Trujillo2015}.
@@ -783,13 +771,13 @@ Facilities (LIEF) national competitive grant scheme.
 The LIEF grant scheme allows consortia lead by an Australian higher education institution to seek part funding
 (typically $\sim50\%$) for a research infrastructure project from the government, with the remainder to come from the
 institutions of the consortium. The Space Eye LIEF consortium is lead by PI Lee Spitler of Macquarie University and
-includes astronomers, instrument scientists and engineers from 7 Australian universities (Macquarie University,
-Australian National University, UNSW, University of Sydney, University of Queensland, Western Sydney University and
-Swinburne), the Australian Astronomical Observatory, and both Tyvak and California Polytechnic State University, San
-Luis Obispo from the USA.
+includes astronomers, instrument scientists and engineers from 6 Australian universities (Macquarie University,
+Australian National University, University of New South Wales, University of Western Australia,
+University of Queensland, Swinburne University of Technology), the Australian Astronomical Observatory, and both Tyvak
+and California Polytechnic State University, San Luis Obispo from the USA.
 
-The outcome of our grant application is expected in September 2016 and, if successful, will be followed by a 3
-year construction phase with launch and commissioning planned for H2 2019.
+The outcome of our grant application is expected in September 2017 and, if successful, will be followed by a 3
+year construction phase with launch and commissioning planned for H2 2020.
 
 \section*{Acknowledgements}
 
